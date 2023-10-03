@@ -5,30 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/24 17:50:41 by aliburdi          #+#    #+#             */
-/*   Updated: 2023/09/24 19:15:44 by aliburdi         ###   ########.fr       */
+/*   Created: 2023/09/26 15:43:49 by aliburdi          #+#    #+#             */
+/*   Updated: 2023/09/30 17:22:09 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 
-void	check_file(std::string file_path, std::string to_be_replaced, std::string replacement);
-void	replace(std::string file_path, std::string content,
+void	replace(std::string file_path, std::string to_be_replaced, std::string replacement);
+void	actual_replacement(std::string file_path, std::string content,
 					std::string to_be_replaced, std::string replacement);
 
-int	main(int ac, char **av)
+int	main(int argc, char **argv)
 {
-	if (ac != 4)
+	if (argc != 4)
 	{
-		std::cerr<< "Need 3 arguments: " << std::endl;
+		std::cerr<< "Need 3 arguments: "
+			<< "<file_path> <str_to_be_replaced> <replacement_string>" << std::endl;
 		return (0);
 	}
-	check_file(av[1], av[2], av[3]);
+	replace(argv[1], argv[2], argv[3]);
 	return (0);
 }
 
-void	check_file(std::string file_path, std::string to_be_replaced, std::string replacement)
+void	replace(std::string file_path, std::string to_be_replaced, std::string replacement)
 {
 	std::ifstream	input_file(file_path);
 	std::string		content;
@@ -45,11 +46,11 @@ void	check_file(std::string file_path, std::string to_be_replaced, std::string r
 		input_file.close();
 		return ;
 	}
-	replace(file_path, content, to_be_replaced, replacement);
+	actual_replacement(file_path, content, to_be_replaced, replacement);
 	input_file.close();
 }
 
-void	replace(std::string file_path, std::string content,
+void	actual_replacement(std::string file_path, std::string content,
 					std::string to_be_replaced, std::string replacement)
 {
 	std::ofstream	output_file(file_path + ".replace");

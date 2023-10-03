@@ -6,7 +6,7 @@
 #    By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/24 16:48:11 by aliburdi          #+#    #+#              #
-#    Updated: 2023/09/24 17:21:05 by aliburdi         ###   ########.fr        #
+#    Updated: 2023/10/03 17:27:04 by aliburdi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS		= main.cpp
 OBJS		= $(SRCS:.cpp=.o)
 RM			= rm -f
 FLAGS		= -Wall -Wextra -Werror -std=c++98
-COMPILER	= clang++
+COMPILER	= g++
 
 .cpp.o:
 	${COMPILER} ${FLAGS} -c $< -o ${<:.cpp=.o}

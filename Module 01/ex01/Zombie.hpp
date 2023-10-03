@@ -6,9 +6,12 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 14:21:49 by aliburdi          #+#    #+#             */
-/*   Updated: 2023/09/24 16:39:04 by aliburdi         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:46:06 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
@@ -26,3 +29,5 @@ class Zombie
 		Zombie* zombieHorde( int N, std::string name);
 		
 };
+
+#endif
