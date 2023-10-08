@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 17:51:29 by aliburdi          #+#    #+#             */
-/*   Updated: 2023/10/03 17:34:08 by aliburdi         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:05:39 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed(void)
 
 Fixed::~Fixed(void)
 {
-	std::cout << "Deconstructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const float nbr)

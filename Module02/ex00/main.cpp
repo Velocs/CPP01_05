@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 17:51:39 by aliburdi          #+#    #+#             */
-/*   Updated: 2023/10/02 19:24:30 by aliburdi         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:02:29 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,5 @@ int	main(void)
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
-	a.setRawBits(2);
-	std::cout << a.getRawBits() << std::endl;
 	return 0;
 }
