@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:07:01 by aliburdi          #+#    #+#             */
-/*   Updated: 2023/10/09 00:22:40 by aliburdi         ###   ########.fr       */
+/*   Updated: 2023/10/09 16:43:11 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		this->hp = 0;
 	if (this->hp == 0)
 	{
-		std::cout << "ClapTrap " << this->name << " has been killed!" << std::endl;
+		std::cout << "ClapTrap " << this->name << " takes " << amount << " damage and dies!" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << this->name << " takes " << amount << " damage!" << std::endl;
